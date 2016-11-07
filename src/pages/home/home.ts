@@ -16,7 +16,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, 
               public modalCtrl: ModalController, 
-              //public ngRedux: NgRedux<IAppState>,
+              //public ngRedux: NgRedux<any>,
               //public noteActions: NoteActions,
               public docActions: DocActions) {
 

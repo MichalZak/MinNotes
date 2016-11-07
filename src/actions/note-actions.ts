@@ -17,7 +17,7 @@ export class  NoteActions {
     static SAVE_NOTE: string = 'SAVE_NOTE';
 
 
-    constructor (private ngRedux: NgRedux<IAppState>) {
+    constructor (private ngRedux: NgRedux<any>) {
         this.initDB();
     }
 

@@ -16,7 +16,7 @@ export class DocActions {
     static REMOVE_SUCCESS: string = 'REMOVE_DOC_SUCCESS';
     static SAVE_SUCCESS: string = 'SAVE_DOC_SUCCESS';
 
-    constructor(private ngRedux: NgRedux<IAppState>) {
+    constructor(private ngRedux: NgRedux<any>) {
 
     }
     

@@ -1,6 +1,7 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { IonicApp, IonicModule, Platform } from 'ionic-angular';
 import { MyApp } from './app.component';
+
 import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
 import { NoteDetailPage } from '../pages/note-detail';
@@ -32,7 +33,7 @@ import { DocActions } from '../actions/doc-actions';
     TabsPage
   ],
   imports: [
-    NgReduxModule,
+    NgReduxModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -51,7 +52,7 @@ export class AppModule {
 
   constructor(  private platform: Platform,
                 private appRef: ApplicationRef,
-                private ngRedux: NgRedux<IAppState>, 
+                private ngRedux: NgRedux<any>, 
                 private docProvider: DocProvider,
                 private devTool: DevToolsExtension){
   //private devTool: DevToolsExtension

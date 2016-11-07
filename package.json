@@ -4,7 +4,7 @@
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
-    "build": "ionic-app-scripts build --dev",
+    "build": "ionic-app-scripts build",
     "watch": "ionic-app-scripts watch",
     "serve:before": "watch",
     "emulate:before": "build",
@@ -27,7 +27,7 @@
     "ionic-native": "2.2.3",
     "ionicons": "3.0.0",
     "moment": "^2.15.2",
-    "ng2-redux": "^4.0.0-beta.0",
+    "ng2-redux": "^4.0.0",
     "pouchdb": "^6.0.7",
     "redux": "^3.6.0",
     "redux-logger": "^2.7.4",
