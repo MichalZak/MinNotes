@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+
+        <ion-buttons start>
+                <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+        </ion-buttons>
+        <ion-title>
+            Add Item
+        </ion-title>
+          <ion-buttons end>
+              <button ion-button icon-only (click)="remove()"><ion-icon name="trash"></ion-icon></button>
+          </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="submitForm(form)" >
+    <ion-list>
+ 
+      <ion-item>
+        <ion-label floating>Title</ion-label>
+        <ion-input type="text" name="title" required [(ngModel)]="note.title"></ion-input>
+      </ion-item>
+ 
+      <ion-item>
+        <ion-label floating>Note</ion-label>
+        <ion-textarea [(ngModel)]="note.note" name="note" 
+              rows="8" playholder="Enter your note here" ></ion-textarea>
+      </ion-item>
+ 
+    </ion-list>
+ 
+    <button full ion-button color="secondary" type="submit">Save</button> 
+  </form>
+</ion-content>

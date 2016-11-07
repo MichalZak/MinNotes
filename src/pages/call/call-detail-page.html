@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+
+        <ion-buttons begin>
+                <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+        </ion-buttons>
+        <ion-title>
+            Call Detail: 
+        </ion-title>
+          <ion-buttons end>
+              <button ion-button icon-only (click)="remove()"><ion-icon name="trash"></ion-icon></button>
+          </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="submitForm(form)" >
+    <ion-list>
+ 
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" name="name" required [(ngModel)]="call.name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Address</ion-label>
+        <ion-input type="text" name="address" required [(ngModel)]="call.address"></ion-input>
+      </ion-item>
+ 
+      <ion-item>
+        <ion-label>Come Back:</ion-label>
+        <ion-datetime
+          (focus)="onDateFocus($event)"  
+          displayFormat="YYYY, MMM DDD,  hh:mm:a" 
+          pickerFormat="YYYY, MMM DDD,  hh:mm:a" 
+          name='date' [(ngModel)]="myDate">
+        </ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Note</ion-label>
+        <ion-textarea [(ngModel)]="call.note" name="call" 
+              rows="8" playholder="Enter your notes here" ></ion-textarea>
+      </ion-item>
+ 
+    </ion-list>
+ 
+    <button full ion-button color="secondary" type="submit">Save</button> 
+  </form>
+</ion-content>
